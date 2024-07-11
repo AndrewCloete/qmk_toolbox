@@ -23,10 +23,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // Layer names don't all need to be of the same length, obviously, and you can also skip them
 // entirely and just use numbers.
 #define _QWERTY 0
-#define _SYMB 1
-#define _NAV 2
-#define _ADJUST 3
-#define _LOCK1 4
+#define _LOCK1 1
+#define _SYMB 2
+#define _NAV 3
+#define _ADJUST 4
 
 enum custom_keycodes { QWERTY = SAFE_RANGE, SYMB, NAV, ADJUST, KC_WIN_TAB, MACRO_PTT };
 
@@ -116,9 +116,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //├────────┼────────┼────────┼────────┼────────┼────────┐                                  ┌────────┼────────┼────────┼────────┼────────┼────────┤
  DF(_QWERTY) ,KC_EXLM, KC_1,    KC_2 ,   KC_3,    KC_UNDS,                                    KC_CIRC,KC_1    ,KC_2    ,KC_3    ,KC_DLR ,  KC_MINS ,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                                  ├────────┼────────┼────────┼────────┼────────┼────────┤
-     SYM_A   ,KC_AT   ,KC_4,    KC_5,    KC_6,    KC_BTN1,                                    KC_HASH, KC_4    ,KC_5    ,KC_6    ,KC_ASTR ,KC_GRV  ,
+     KC_NAESC, KC_AT,  KC_4,    KC_5,    KC_6,    KC_BTN1,                                    KC_HASH, KC_4    ,KC_5    ,KC_6    ,KC_ASTR ,KC_GRV  ,
   //├────────┼────────┼────────┼────────┼────────┼────────┐                                  ┌────────┼────────┼────────┼────────┼────────┼────────┤
-     _______ ,XXXXXXX, KC_7,    KC_8 ,   KC_9 ,   KC_BTN2,                                    KC_PERC ,KC_7    ,KC_8    ,KC_9    ,KC_TILD ,KC_EXLM ,
+     _______ ,XXXXXXX,  KC_7,    KC_8 ,   KC_9 ,   KC_BTN2,                                    KC_PERC ,KC_7    ,KC_8    ,KC_9    ,KC_TILD ,KC_EXLM ,
   //├────────┼────────┼────────┼────────┼────┬───┴────┬───┼────────┼────────┤       ├────────┼────────┼───┬────┴───┬────┼────────┼────────┼────────┤
                                               KC_0,        _______ ,_______ ,        _______ ,_______ ,    KC_0
   //                                         └────────┘   └────────┴────────┘       └────────┴────────┘   └────────┘
